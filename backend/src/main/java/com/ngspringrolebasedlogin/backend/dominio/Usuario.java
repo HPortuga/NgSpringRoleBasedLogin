@@ -19,4 +19,41 @@ public class Usuario extends EntidadeBase {
    public List<Autoridade> autoridades;
 
    public Usuario(){}
+
+   public Usuario(String username, String senha) {
+      this.username = username;
+      this.senha = senha;
+   }
+
+   public String getUsername() {
+      return username;
+   }
+
+   public void setUsername(String username) {
+      this.username = username;
+   }
+
+   public String getSenha() {
+      return senha;
+   }
+
+   public void setSenha(String senha) {
+      this.senha = senha;
+   }
+
+   public List<Autoridade> getAutoridades() {
+      return autoridades;
+   }
+
+   public void setAutoridades(List<Autoridade> autoridades) {
+      this.autoridades = autoridades;
+   }
+
+   public void addAutoridade(Autoridade autoridade) {
+      this.autoridades.add(autoridade);
+   }
+
+   public void removeAutoridade(Autoridade autoridade) {
+      this.autoridades.remove(autoridade);
+   }
 }

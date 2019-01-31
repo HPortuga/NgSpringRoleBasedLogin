@@ -16,4 +16,24 @@ public class Autoridade extends EntidadeBase {
    private Usuario usuario;
 
    public Autoridade(){}
+
+   public Autoridade(String nome) {
+      this.nome = nome;
+   }
+
+   public String getNome() {
+      return nome;
+   }
+
+   public void setNome(String nome) {
+      this.nome = nome;
+   }
+
+   public Usuario getUsuario() {
+      return usuario;
+   }
+
+   public void setUsuario(Usuario usuario) {
+      this.usuario = usuario;
+   }
 }
