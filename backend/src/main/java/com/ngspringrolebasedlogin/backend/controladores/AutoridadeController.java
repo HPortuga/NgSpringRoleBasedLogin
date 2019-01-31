@@ -1,6 +1,7 @@
 package com.ngspringrolebasedlogin.backend.controladores;
 
 import com.ngspringrolebasedlogin.backend.dominio.Autoridade;
+import com.ngspringrolebasedlogin.backend.pojos.AutoridadeDTO;
 import com.ngspringrolebasedlogin.backend.servicos.AutoridadeService;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,7 +19,7 @@ public class AutoridadeController {
 
    @GetMapping(path = "todos")
    @ResponseBody
-   public List<Autoridade> buscarTodos() {
+   public List<AutoridadeDTO> buscarTodos() {
       return this.autoridadeService.buscarTodos();
    }
 

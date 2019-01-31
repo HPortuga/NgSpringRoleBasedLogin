@@ -1,6 +1,7 @@
 package com.ngspringrolebasedlogin.backend.controladores;
 
 import com.ngspringrolebasedlogin.backend.dominio.Usuario;
+import com.ngspringrolebasedlogin.backend.pojos.UsuarioDTO;
 import com.ngspringrolebasedlogin.backend.servicos.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -20,7 +21,7 @@ public class UsuarioController {
 
    @GetMapping(path = "/todos")
    @ResponseBody
-   public List<Usuario> buscarTodos() {
+   public List<UsuarioDTO> buscarTodos() {
       return this.usuarioService.buscarTodos();
    }
 }
