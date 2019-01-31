@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "api/autoridade")
+@RequestMapping(value = "/api/autoridade")
 @CrossOrigin(origins = "http://localhost:4200")
 public class AutoridadeController {
    private final AutoridadeService autoridadeService;
@@ -17,7 +17,7 @@ public class AutoridadeController {
       this.autoridadeService = autoridadeService;
    }
 
-   @GetMapping(path = "todos")
+   @GetMapping(path = "/todos")
    @ResponseBody
    public List<AutoridadeDTO> buscarTodos() {
       return this.autoridadeService.buscarTodos();
