@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AutoridadeService } from 'src/app/servicos/autoridade.service';
 
 @Component({
   selector: 'app-cliente',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClienteComponent implements OnInit {
 
-  constructor() { }
+  constructor(private autoridadeService: AutoridadeService) { }
 
   ngOnInit() {
+    this.autoridadeService.buscarTodos().subscribe(data => console.log(data));
   }
 
 }
